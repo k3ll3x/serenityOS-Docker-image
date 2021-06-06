@@ -2,14 +2,14 @@
 
 Simple docker image for building SerenityOS and creating a disk image and running it with QEMU.
 
-###Dependencies
+### Dependencies
 
 - Linux Distro (Docker base image is debian:latest)
 - xhost
 - Docker
 - SerenityOS [Source](https://github.com/SerenityOS/serenity.git)
 
-###Usage
+### Usage
 
 Install **Docker** and **xhost**, and clone SerenityOS Repository in project folder:
 
