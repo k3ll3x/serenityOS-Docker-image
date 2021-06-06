@@ -1,6 +1,6 @@
-# SerenityOS build and run Docker image
+# Run and Build SerenityOS with a Docker Image
 
-Simple docker image for building SerenityOS and creating a disk image and running it with QEMU.
+Simple docker image that builds SerenityOS and creates a disk image that runs in QEMU.
 
 ### Dependencies
 
@@ -11,24 +11,24 @@ Simple docker image for building SerenityOS and creating a disk image and runnin
 
 ### Usage
 
-Install **Docker** and **xhost**, and clone SerenityOS Repository in project folder:
+Install **Docker** and **xhost**
 
-`
-git clone https://github.com/SerenityOS/serenity.git
-`
-
-This will clone the repository into **./serenity**
-After that you can simply run:
+Build the Docker image with:
 
 `
 ./build.sh
 `
 
-Docker serenityos image will be created and then you can run it with:
+The SerenityOS Repository will be cloned in the container and a volume will be created.
+
+Docker serenityos image will be created and then you can run it in QEMU with:
 
 `
 ./run.sh
 `
 
-**Audio is not enabled yet for this Docker image**
+For entering the bash of the container you can:
 
+`
+./run_bash.sh
+`
