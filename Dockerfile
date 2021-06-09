@@ -30,3 +30,5 @@ RUN ninja install
 RUN ninja image
 
 WORKDIR /serenity/Build/i686
+
+RUN export PATH="/serenity/Toolchain/Local/i686/bin/:$PATH"
