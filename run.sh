@@ -6,5 +6,4 @@ docker run --privileged --rm -it \
 	--device /dev/snd \
 	--name=serenityos \
 	-v /tmp/.X11-unix:/tmp/.X11-unix \
-	-v $PWD/serenity_images:/serenity_images \
 	serenityos ninja run
