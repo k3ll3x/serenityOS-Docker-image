@@ -11,10 +11,11 @@ RUN apt update -y
 #install gcc g++ 10
 RUN apt install -y gcc-10 g++-10
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 900 --slave /usr/bin/g++ g++ /usr/bin/g++-10
-RUN apt install -y genext2fs git emacs
+RUN apt install -y genext2fs git vim 
 
 #building dependencies
-RUN apt install -y build-essential cmake curl libmpfr-dev libmpc-dev libgmp-dev e2fsprogs ninja-build qemu-system-i386 qemu-utils
+RUN apt install -y build-essential cmake curl libmpfr-dev \
+    libmpc-dev libgmp-dev e2fsprogs ninja-build qemu-system-i386 qemu-utils
 
 RUN git clone https://github.com/SerenityOS/serenity.git /serenity
 
